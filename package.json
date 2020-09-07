@@ -19,5 +19,12 @@
     "babel-loader": "^8.1.0",
     "nodemon": "2.0.4"
   },
+  "prettier": {
+    "arrowParens": "avoid",
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none"
+  },
   "keywords": []
 }
