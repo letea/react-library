@@ -1,0 +1,1 @@
+export const DURATION_ANIMATION_PAUSE = 600;

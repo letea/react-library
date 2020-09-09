@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@storybook/react/demo";
+import Code from "../components/Code";
 
 export default {
   title: "Button",
@@ -12,7 +13,7 @@ export default {
   // }
 };
 
-export const Text = ({ label, ...args }) => <Button {...args}>{label}</Button>;
+export const Text = ({ label, ...args }) => <><Button {...args}>{label}</Button><Code code="console.log(123);" /></>;
 Text.args = {
   label: "Button"
 };
