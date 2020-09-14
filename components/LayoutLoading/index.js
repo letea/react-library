@@ -9,7 +9,7 @@ import ImageLoader from "../ImageLoader";
 import useWindowEvent from "../../hooks/useWindowEvent";
 
 // local assets
-import videoSrc from "assets/media/loading.mp4";
+import videoSrc from "./video.mp4";
 
 // local files
 import { Wrapper, Container, Progress, Tips, Resource } from "./style";
