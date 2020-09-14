@@ -13,6 +13,7 @@ const BackgroundVideo = ({
   video = "",
   poster = "",
   isFixed = false,
+  isPauseOnBlur = true,
   children
 }) => {
   const [isPlaying, setIsPlaying] = useIsPlaying();
@@ -29,7 +30,7 @@ const BackgroundVideo = ({
           isPlaysInline
           isMuted
           isLoop
-          isPauseOnBlur
+          isPauseOnBlur={isPauseOnBlur}
           isCoverSize
           onPlay={setIsPlaying}
         />
@@ -43,6 +44,7 @@ BackgroundVideo.propTypes = {
   video: PropTypes.string.isRequired,
   poster: PropTypes.string,
   isFixed: PropTypes.bool,
+  isPauseOnBlur: PropTypes.bool,
   children: PropTypes.node
 };
 
