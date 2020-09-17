@@ -24,6 +24,8 @@
     "@storybook/addons": "^6.0.21",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-react": "^7.20.6",
     "nodemon": "2.0.4"
   },
   "prettier": {
