@@ -17,12 +17,15 @@ const useThrottleState = props => {
     newValue => {
       if (typeof newValue !== "undefined") {
         currentTime.current = Date.now();
-        if (lastTime.current && currentTime.current < lastTime.current + throttleTime) {
-            clearTimeout(timer.current);
-            timer.current = setTimeout(() => {
-              lastTime.current = currentTime.current;
-              setValue(newValue);
-            }, throttleTime);
+        if (
+          lastTime.current &&
+          currentTime.current < lastTime.current + throttleTime
+        ) {
+          clearTimeout(timer.current);
+          timer.current = setTimeout(() => {
+            lastTime.current = currentTime.current;
+            setValue(newValue);
+          }, throttleTime);
         } else {
           clearTimeout(timer.current);
           lastTime.current = currentTime.current;

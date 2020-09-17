@@ -22,5 +22,5 @@ storiesOf("Hooks", module).add("useThrottleState", () => {
       <div>{`Value: ${value}`}</div>
       <KnobsContainer />
     </>
-  )
+  );
 });
