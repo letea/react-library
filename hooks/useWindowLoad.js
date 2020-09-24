@@ -9,10 +9,10 @@ import useTimeout from "./useTimeout";
 import checkIsWindowLoaded from "@letea/functions/checkIsWindowLoaded";
 
 const useWindowLoad = () => {
-  const [isLoaded, setisLoaded] = useState(checkIsWindowLoaded());
+  const [isLoaded, setIsLoaded] = useState(checkIsWindowLoaded());
 
   const handleLoad = () => {
-    !isLoaded && setisLoaded(true);
+    !isLoaded && setIsLoaded(true);
   };
 
   useWindowEvent({
