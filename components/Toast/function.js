@@ -4,26 +4,29 @@ import { render, unmountComponentAtNode } from "react-dom";
 
 // local modules - functions
 import checkIsString from "@letea/functions/checkIsString";
+import getRandomString from "@letea/functions/getRandomString";
 
 // local files
 import { DEFAULT_ID } from "./config";
 import Toast from "./index";
 
-const getRootElement = () => {
-  let rootElement = document.getElementById(DEFAULT_ID);
+const getRootElement = (elementId = "") => {
+  let rootElement = document.getElementById(elementId);
   if (!rootElement) {
     rootElement = document.createElement("div");
-    rootElement.id = DEFAULT_ID;
+    rootElement.id = elementId;
     document.body.appendChild(rootElement);
   }
 
   return rootElement;
 };
 
-const destroy = () => {
-  const rootElement = getRootElement();
+const destroyComponent = rootElement => {
+  rootElement && unmountComponentAtNode(rootElement);
+};
 
-  unmountComponentAtNode(rootElement);
+const destroyRootElement = rootElement => {
+  rootElement && rootElement.remove();
 };
 
 const defaultProps = {
@@ -35,10 +38,10 @@ const defaultProps = {
 
 const toast = props => {
   const { message, url, duration, hasClose } = { ...defaultProps, ...props };
-  const rootElement = getRootElement();
+  const rootElement = getRootElement(`${DEFAULT_ID}-${getRandomString(5)}`);
 
   if (rootElement.children) {
-    destroy();
+    destroyComponent(rootElement);
   }
 
   render(
@@ -47,7 +50,10 @@ const toast = props => {
       url={url}
       duration={duration}
       hasClose={hasClose}
-      onFinish={destroy}
+      onFinish={() => {
+        destroyComponent(rootElement);
+        destroyRootElement(rootElement);
+      }}
     />,
     rootElement
   );
