@@ -51,7 +51,8 @@ Loading.propTypes = {
 const openFullscreenLoading = ({
   Spinner = null,
   zIndex = 9999,
-  backgroundColor = "rgba(0, 0, 0, 0.75)"
+  backgroundColor = "rgba(0, 0, 0, 0.75)",
+  onClick = () => {}
 } = {}) => {
   return new Promise(resolve => {
     createReactDOMEElement({
@@ -62,9 +63,7 @@ const openFullscreenLoading = ({
           onEntered={() => {
             resolve();
           }}
-          onClick={() => {
-            removeReactDOMElement(elementId);
-          }}
+          onClick={onClick}
           zIndex={zIndex}
         />
       ),
