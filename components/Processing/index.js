@@ -25,8 +25,8 @@ const Processing = ({
     hasSoundLibrary && isP5ScriptLoaded ? DEFAULT_P5_SOUND_SCRIPT : ""
   );
   const isLibraryLoaded = hasSoundLibrary
-    ? isP5SoundScriptLoaded && isP5SoundScriptLoaded
-    : isP5SoundScriptLoaded;
+    ? isP5ScriptLoaded && isP5SoundScriptLoaded
+    : isP5ScriptLoaded;
 
   useEffect(() => {
     let p5;
