@@ -1,11 +1,11 @@
-// Before using EmbedRunKit, make sure you have implement the script into the <head></head> scope
-// <script src="https://embed.runkit.com"></script>
-
 // node modules
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import prettier from "prettier/standalone";
 import parserBabel from "prettier/parser-babel";
+
+// local modules
+import useScript from "../../hooks/useScript";
 
 const EmbedRunKit = ({
   environment = [], // Environment variables for the execution environment. Available under `process.env`. Defaults to []
@@ -25,32 +25,40 @@ const EmbedRunKit = ({
   title = "" // The title of the RunKit Notebook when it is saved on RunKit
 }) => {
   const elementRef = useRef();
+  const isScriptLoaded = useScript("https://embed.runkit.com");
+
   useEffect(() => {
-    const runKitNoteBook = RunKit.createNotebook({
-      element: elementRef.current,
-      environment,
-      evaluateOnLoad,
-      gutterStyle,
-      hidesActionButton,
-      hidesEndpointLogs,
-      minHeight,
-      mode,
-      nodeVersion,
-      onLoad,
-      packageTimestamp,
-      preamble,
-      readOnly,
-      source: prettier.format(source, {
-        parser: "babel",
-        plugins: [parserBabel],
-        tabWidth: tabSize
-      }),
-      tabSize,
-      title
-    });
+    let runKitNoteBook;
+
+    if (isScriptLoaded) {
+      runKitNoteBook = RunKit.createNotebook({
+        element: elementRef.current,
+        environment,
+        evaluateOnLoad,
+        gutterStyle,
+        hidesActionButton,
+        hidesEndpointLogs,
+        minHeight,
+        mode,
+        nodeVersion,
+        onLoad,
+        packageTimestamp,
+        preamble,
+        readOnly,
+        source: prettier.format(source, {
+          parser: "babel",
+          plugins: [parserBabel],
+          tabWidth: tabSize
+        }),
+        tabSize,
+        title
+      });
+    }
 
     return () => {
-      runKitNoteBook.destroy();
+      if (runKitNoteBook) {
+        runKitNoteBook.destroy();
+      }
     };
   }, [
     environment,
@@ -58,6 +66,7 @@ const EmbedRunKit = ({
     gutterStyle,
     hidesActionButton,
     hidesEndpointLogs,
+    isScriptLoaded,
     minHeight,
     mode,
     nodeVersion,
