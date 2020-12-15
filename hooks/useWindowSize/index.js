@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // local modules - hooks
-import useWindowEvents from "./useWindowEvents";
+import useWindowEvents from "../useWindowEvents";
 
 const useWindowSize = () => {
   const getWindowSize = () => {

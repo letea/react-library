@@ -1,5 +1,5 @@
 // local modules - hooks
-import useEvent from "./useEvent";
+import useEvent from "../useEvent";
 
 const defaultProps = {
   eventName: "resize",

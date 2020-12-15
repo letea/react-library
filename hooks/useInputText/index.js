@@ -2,7 +2,7 @@
 import { useCallback } from "react";
 
 // local modules - hooks
-import useDebounceState from "./useDebounceState";
+import useDebounceState from "../useDebounceState";
 
 // local modules - functions
 import checkIsString from "@letea/functions/checkIsString";

@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // local modules - hooks
-import useWindowEvent from "./useWindowEvent";
+import useWindowEvent from "../useWindowEvent";
 
 const useWindowOrientation = () => {
   const [windowSize, setWindowSize] = useState({

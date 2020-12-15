@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 
 // local modules - hooks
-import useWindowSize from "./useWindowSize";
-import useWindowEvents from "./useWindowEvents";
+import useWindowSize from "../useWindowSize";
+import useWindowEvents from "../useWindowEvents";
 
 const defaultProps = {
   target: null,

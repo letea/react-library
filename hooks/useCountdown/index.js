@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 // local modules - hooks
-import useInterval from "./useInterval";
+import useInterval from "../useInterval";
 
 const defaultProps = {
   defaultCounts: 0,

@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react";
 
 // local modules - hooks
-import useWindowEvents from "./useWindowEvents";
+import useWindowEvents from "../useWindowEvents";
 
 // local modules - functions
 import checkIsWindowFocused from "@letea/functions/checkIsWindowFocused";

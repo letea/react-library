@@ -2,8 +2,8 @@
 import { useState } from "react";
 
 // local modules - hooks
-import useWindowEvent from "./useWindowEvent";
-import useTimeout from "./useTimeout";
+import useWindowEvent from "../useWindowEvent";
+import useTimeout from "../useTimeout";
 
 const DEFAULT_DURATION = 150;
 const defaultProps = {

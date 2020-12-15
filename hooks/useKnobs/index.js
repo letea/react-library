@@ -3,14 +3,14 @@ import React, { useState, useEffect, useMemo } from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 
 // local modules - components
-import Toggle from "./../components/Toggle";
-import Slider from "./../components/Slider";
+import Toggle from "../../components/Toggle";
+import Slider from "../../components/Slider";
 
 // local modules - hooks
-import useInputText from "./useInputText";
-import useInputCheckbox from "./useInputCheckbox";
-import useInputNumber from "./useInputNumber";
-import useSelect from "./useSelect";
+import useInputText from "../useInputText";
+import useInputCheckbox from "../useInputCheckbox";
+import useInputNumber from "../useInputNumber";
+import useSelect from "../useSelect";
 
 // local modules - functions
 import getRandomString from "@letea/functions/getRandomString";
@@ -24,7 +24,7 @@ import {
   SelectWrapper,
   Select,
   Button
-} from "./useKnobs.style";
+} from "./style";
 
 const DEFAULT_CONTAINER = "use-knobs-container";
 const DEFAULT_PREFIX = "knobs";
