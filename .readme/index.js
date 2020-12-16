@@ -13,12 +13,20 @@ const documents = glob.sync("{,!(node_modules)/**/}doc.js").map(file => {
 
 const groupedDocuments = {};
 documents.forEach(document => {
-  const { kind } = document;
-  const hasGroup = !!groupedDocuments[kind];
-  if (hasGroup) {
-    groupedDocuments[kind].push(document);
+  const { kind, type } = document;
+
+  // Add Type
+  const hasType = !!groupedDocuments[type];
+  if (!hasType) {
+    groupedDocuments[type] = {};
+  }
+
+  // Add Kind
+  const hasKind = !!groupedDocuments[type][kind];
+  if (hasKind) {
+    groupedDocuments[type][kind].push(document);
   } else {
-    groupedDocuments[kind] = [document];
+    groupedDocuments[type][kind] = [document];
   }
 });
 
@@ -31,7 +39,7 @@ const jsFormat = (content = "") => {
 
 const main = async () => {
   // Library Title
-  let readMe = `# React Components & Hooks Library\n`;
+  let readMe = `# React Library\n`;
 
   // NPM
   readMe +=
@@ -49,91 +57,104 @@ const main = async () => {
 
   Object.keys(groupedDocuments)
     .sort()
-    .forEach(key => {
-      readMe += `### [${key}](#${key.toLowerCase()}-1)\n`;
+    .forEach(type => {
+      readMe += `### ${type}\n`;
 
-      groupedDocuments[key].forEach(item => {
-        readMe += `- [${item.title}](#${item.title.toLowerCase()})\n`;
-      });
+      Object.keys(groupedDocuments[type])
+        .sort()
+        .forEach(kind => {
+          readMe += `#### ${kind}\n`;
+
+          groupedDocuments[type][kind].forEach(item => {
+            readMe += `- [${item.title}](#${item.title.toLowerCase()})\n`;
+          });
+        });
     });
 
-  // Functions
+  // Components & Hooks
   Object.keys(groupedDocuments)
     .sort()
-    .forEach(key => {
-      // Kind
-      readMe += `# ${key}\n`;
+    .forEach(type => {
+      // Type
+      readMe += `# ${type}\n`;
 
-      groupedDocuments[key].forEach(item => {
-        // title
-        readMe += `## ${item.title}\n`;
+      Object.keys(groupedDocuments[type])
+        .sort()
+        .forEach(kind => {
+          // Kind
+          readMe += `## ${kind}\n`;
 
-        // description
-        if (item.description) {
-          readMe += `${item.description}\n`;
-        }
+          groupedDocuments[type][kind].forEach(item => {
+            // title
+            readMe += `## ${item.title}\n`;
 
-        // defaultProps
-        if (item.defaultProps) {
-          readMe += "### props\n";
-          readMe += `\`\`\`js\n${jsFormat(item.defaultProps)}\n\`\`\`\n`;
-        }
-
-        // usage
-        if (item.usage) {
-          const getTypePath = (type = "") => {
-            switch (type) {
-              case "Component":
-                return "components";
-              case "Hooks":
-                return "hooks";
+            // description
+            if (item.description) {
+              readMe += `${item.description}\n`;
             }
 
-            return "";
-          };
+            // defaultProps
+            if (item.defaultProps) {
+              readMe += "### props\n";
+              readMe += `\`\`\`js\n${jsFormat(item.defaultProps)}\n\`\`\`\n`;
+            }
 
-          readMe += "### usage\n";
-          readMe += `\`\`\`js\n${jsFormat(
-            `import ${item.title} from "@letea/react/${getTypePath(
-              item.type
-            )}/${item.title}";\n${item.usage}`
-          )}\n\`\`\`\n`;
-        }
+            // usage
+            if (item.usage) {
+              const getTypePath = (type = "") => {
+                switch (type) {
+                  case "Component":
+                    return "components";
+                  case "Hooks":
+                    return "hooks";
+                }
 
-        // demo
-        if (item.demo) {
-          readMe += "### Demo\n";
+                return "";
+              };
 
-          // _blank is not working
-          // readMe += `<a href="${item.demo.url}" target="_blank">${item.demo.title}</a>\n`;
-          readMe += `[${item.demo.title}](${item.demo.url})\n`;
-        }
+              readMe += "### usage\n";
+              readMe += `\`\`\`js\n${jsFormat(
+                `import ${item.title} from "@letea/react/${getTypePath(
+                  item.type
+                )}/${item.title}";\n${item.usage}`
+              )}\n\`\`\`\n`;
+            }
 
-        // can i use
-        if (item.canIUse) {
-          readMe += "### Can I Use\n";
+            // demo
+            if (item.demo) {
+              readMe += "### Demo\n";
 
-          item.canIUse.forEach(canIUseItem => {
-            readMe += `<img src="https://caniuse.bitsofco.de/image/${canIUseItem}.png" alt="" />\n\n`;
+              // _blank is not working
+              // readMe += `<a href="${item.demo.url}" target="_blank">${item.demo.title}</a>\n`;
+              readMe += `[${item.demo.title}](${item.demo.url})\n`;
+            }
+
+            // can i use
+            if (item.canIUse) {
+              readMe += "### Can I Use\n";
+
+              item.canIUse.forEach(canIUseItem => {
+                readMe += `<img src="https://caniuse.bitsofco.de/image/${canIUseItem}.png" alt="" />\n\n`;
+              });
+            }
+
+            // notes
+            if (item.notes) {
+              readMe += "### notes\n";
+              item.notes.forEach(note => {
+                readMe += `- ${note}\n`;
+              });
+            }
+
+            // references
+            if (item.references) {
+              readMe += "### references\n";
+              item.references.forEach(reference => {
+                readMe += `- [${reference.title}](${reference.url})\n`;
+              });
+            }
           });
-        }
-
-        // notes
-        if (item.notes) {
-          readMe += "### notes\n";
-          item.notes.forEach(note => {
-            readMe += `- ${note}\n`;
-          });
-        }
-
-        // references
-        if (item.references) {
-          readMe += "### references\n";
-          item.references.forEach(reference => {
-            readMe += `- [${reference.title}](${reference.url})\n`;
-          });
-        }
-      });
+        });
     });
 
   const { contents, messages } = await formatFromString(readMe);

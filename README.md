@@ -1,4 +1,4 @@
-# React Components & Hooks Library
+# React Library
 
 [![npm version](https://badge.fury.io/js/%40letea%2Freact.svg)](https://badge.fury.io/js/%40letea%2Freact)
 
@@ -12,32 +12,34 @@ npm install @letea/react
 
 ## Contents
 
-### [Background](#background-1)
+### Component
+
+#### Background
 
 * [BackgroundFixedImage](#backgroundfixedimage)
 * [BackgroundGallery](#backgroundgallery)
 * [BackgroundGalleryWithOrientation](#backgroundgallerywithorientation)
 * [BackgroundVideo](#backgroundvideo)
 
-### [Canvas](#canvas-1)
+#### Canvas
 
 * [Flashlight](#flashlight)
 * [Lighting](#lighting)
 * [Processing](#processing)
 * [Scratcher](#scratcher)
 
-### [Element](#element-1)
+#### Element
 
 * [ElementInView](#elementinview)
 * [HorizontalScroll](#horizontalscroll)
 * [Marquee](#marquee)
 
-### [Image](#image-1)
+#### Image
 
 * [Gallery](#gallery)
 * [ImageLoader](#imageloader)
 
-### [Layout](#layout-1)
+#### Layout
 
 * [FullPage](#fullpage)
 * [FullscreenLoading](#fullscreenloading)
@@ -46,29 +48,83 @@ npm install @letea/react
 * [LayoutTransition](#layouttransition)
 * [Mask](#mask)
 
-### [Media](#media-1)
+#### Media
 
 * [VideoPlayer](#videoplayer)
 
-### [Notification](#notification-1)
+#### Notification
 
 * [Toast](#toast)
 
-### [Text](#text-1)
+#### Text
 
 * [Clipboard](#clipboard)
 * [Code](#code)
 * [EmbedRunKit](#embedrunkit)
 * [QRCode](#qrcode)
 
-### [Tool](#tool-1)
+#### Tool
 
 * [FPS](#fps)
 * [Frame](#frame)
 * [RenderCounter](#rendercounter)
 * [WindowSize](#windowsize)
 
-# Background
+### Hooks
+
+#### Document
+
+* [useDocumentTitle](#usedocumenttitle)
+
+#### Element
+
+* [useElementInView](#useelementinview)
+
+#### Event
+
+* [useEvent](#useevent)
+* [useEvents](#useevents)
+
+#### Form
+
+* [useInputCheckbox](#useinputcheckbox)
+* [useInputNumber](#useinputnumber)
+* [useInputText](#useinputtext)
+* [useKnobs](#useknobs)
+* [useSelect](#useselect)
+
+#### Image
+
+* [useImage](#useimage)
+
+#### Script
+
+* [useScript](#usescript)
+
+#### State
+
+* [useDebounceState](#usedebouncestate)
+* [useThrottleState](#usethrottlestate)
+
+#### Time
+
+* [useCountdown](#usecountdown)
+* [useInterval](#useinterval)
+* [useTimeout](#usetimeout)
+
+#### Window
+
+* [useIsWindowEventTriggering](#useiswindoweventtriggering)
+* [useWindowBlur](#usewindowblur)
+* [useWindowEvent](#usewindowevent)
+* [useWindowEvents](#usewindowevents)
+* [useWindowLoad](#usewindowload)
+* [useWindowOrientation](#usewindoworientation)
+* [useWindowSize](#usewindowsize)
+
+# Component
+
+## Background
 
 ## BackgroundFixedImage
 
@@ -101,7 +157,7 @@ function Example() {
 
 ### Demo
 
-[BackgroundFixedImage](https://storybook.letea.me/?path=/story/playground-components-background--backgroundfixedimage){:target="\_blank" rel="noopener"}
+[BackgroundFixedImage](https://storybook.letea.me/?path=/story/playground-components-background--backgroundfixedimage)
 
 ### Can I Use
 
@@ -139,7 +195,7 @@ function Example() {
 
 ### Demo
 
-[Ghost of Tsushima](https://storybook.letea.me/?path=/story/playground-websites--ghost-of-tsushima){:target="\_blank" rel="noopener"}
+[Ghost of Tsushima](https://storybook.letea.me/?path=/story/playground-websites--ghost-of-tsushima)
 
 ## BackgroundGalleryWithOrientation
 
@@ -177,7 +233,7 @@ function Example() {
 
 ### Demo
 
-[BackgroundGalleryWithOrientation](https://storybook.letea.me/?path=/story/playground-components-background--backgroundgallery-with-orientation){:target="\_blank" rel="noopener"}
+[BackgroundGalleryWithOrientation](https://storybook.letea.me/?path=/story/playground-components-background--backgroundgallery-with-orientation)
 
 ## BackgroundVideo
 
@@ -212,9 +268,9 @@ function Example() {
 
 ### Demo
 
-[TENET](https://storybook.letea.me/?path=/story/playground-websites--tenet){:target="\_blank" rel="noopener"}
+[TENET](https://storybook.letea.me/?path=/story/playground-websites--tenet)
 
-# Canvas
+## Canvas
 
 ## Flashlight
 
@@ -243,7 +299,7 @@ function Example() {
 
 ### Demo
 
-[Flashlight](https://storybook.letea.me/?path=/story/playground-components-canvas--flashlight){:target="\_blank" rel="noopener"}
+[Flashlight](https://storybook.letea.me/?path=/story/playground-components-canvas--flashlight)
 
 ### notes
 
@@ -266,7 +322,7 @@ function Example() {
 
 ### Demo
 
-[Lighting](https://storybook.letea.me/?path=/story/playground-components-canvas--lighting){:target="\_blank" rel="noopener"}
+[Lighting](https://storybook.letea.me/?path=/story/playground-components-canvas--lighting)
 
 ### notes
 
@@ -312,7 +368,7 @@ function Example() {
 
 ### Demo
 
-[Processing](https://storybook.letea.me/?path=/story/components-canvas-4--processing){:target="\_blank" rel="noopener"}
+[Processing](https://storybook.letea.me/?path=/story/components-canvas-4--processing)
 
 ### notes
 
@@ -341,9 +397,9 @@ function Example() {
 
 ### Demo
 
-[Scratcher](https://storybook.letea.me/?path=/story/components-canvas-4--scratcher){:target="\_blank" rel="noopener"}
+[Scratcher](https://storybook.letea.me/?path=/story/components-canvas-4--scratcher)
 
-# Element
+## Element
 
 ## ElementInView
 
@@ -384,7 +440,7 @@ function Example() {
 
 ### Demo
 
-[ElementInView](https://storybook.letea.me/?path=/story/playground-components-element--elementinview){:target="\_blank" rel="noopener"}
+[ElementInView](https://storybook.letea.me/?path=/story/playground-components-element--elementinview)
 
 ## HorizontalScroll
 
@@ -420,7 +476,7 @@ function Example() {
 
 ### Demo
 
-[HorizontalScroll](https://storybook.letea.me/?path=/story/components-element-3--horizontalscroll){:target="\_blank" rel="noopener"}
+[HorizontalScroll](https://storybook.letea.me/?path=/story/components-element-3--horizontalscroll)
 
 ### notes
 
@@ -462,13 +518,13 @@ function Example() {
 
 ### Demo
 
-[Marquee](https://storybook.letea.me/?path=/story/components-element-3--marquee){:target="\_blank" rel="noopener"}
+[Marquee](https://storybook.letea.me/?path=/story/components-element-3--marquee)
 
 ### notes
 
 * The children should be 'display: inline-block' or 'inline-flex'.
 
-# Image
+## Image
 
 ## Gallery
 
@@ -498,7 +554,7 @@ function Example() {
 
 ### Demo
 
-[Gallery](https://storybook.letea.me/?path=/story/components-image-2--gallery){:target="\_blank" rel="noopener"}
+[Gallery](https://storybook.letea.me/?path=/story/components-image-2--gallery)
 
 ## ImageLoader
 
@@ -538,9 +594,9 @@ function Example() {
 
 ### Demo
 
-[ImageLoader](https://storybook.letea.me/?path=/story/components-image-2--imageloader){:target="\_blank" rel="noopener"}
+[ImageLoader](https://storybook.letea.me/?path=/story/components-image-2--imageloader)
 
-# Layout
+## Layout
 
 ## FullPage
 
@@ -576,7 +632,7 @@ function Example() {
 
 ### Demo
 
-[FullPage](https://storybook.letea.me/?path=/story/playground-components-layout--fullpage){:target="\_blank" rel="noopener"}
+[FullPage](https://storybook.letea.me/?path=/story/playground-components-layout--fullpage)
 
 ## FullscreenLoading
 
@@ -624,7 +680,7 @@ function Example() {
 
 ### Demo
 
-[FullscreenLoading](https://storybook.letea.me/?path=/story/components-layout-6--fullscreenloading){:target="\_blank" rel="noopener"}
+[FullscreenLoading](https://storybook.letea.me/?path=/story/components-layout-6--fullscreenloading)
 
 ## LandscapeTip
 
@@ -653,7 +709,7 @@ function Example() {
 
 ### Demo
 
-[LandscapeTip](https://storybook.letea.me/?path=/story/playground-components-layout--landscapetip){:target="\_blank" rel="noopener"}
+[LandscapeTip](https://storybook.letea.me/?path=/story/playground-components-layout--landscapetip)
 
 ## LayoutLoading
 
@@ -700,7 +756,7 @@ function Example() {
 
 ### Demo
 
-[LayoutLoading](https://storybook.letea.me/?path=/story/components-layout-6--layoutloading){:target="\_blank" rel="noopener"}
+[LayoutLoading](https://storybook.letea.me/?path=/story/components-layout-6--layoutloading)
 
 ## LayoutTransition
 
@@ -748,7 +804,7 @@ function Example() {
 
 ### Demo
 
-[LayoutTransition](https://storybook.letea.me/?path=/story/components-layout-6--layouttransition){:target="\_blank" rel="noopener"}
+[LayoutTransition](https://storybook.letea.me/?path=/story/components-layout-6--layouttransition)
 
 ## Mask
 
@@ -782,9 +838,9 @@ function Example() {
 
 ### Demo
 
-[Mask](https://storybook.letea.me/?path=/story/components-layout-6--mask){:target="\_blank" rel="noopener"}
+[Mask](https://storybook.letea.me/?path=/story/components-layout-6--mask)
 
-# Media
+## Media
 
 ## VideoPlayer
 
@@ -832,13 +888,13 @@ function Example() {
 
 ### Demo
 
-[VideoPlayer](https://storybook.letea.me/?path=/story/components-media-1--videoplayer){:target="\_blank" rel="noopener"}
+[VideoPlayer](https://storybook.letea.me/?path=/story/components-media-1--videoplayer)
 
 ### references
 
 * [Public Test Videos](https://gist.github.com/jsturgis/3b19447b304616f18657)
 
-# Notification
+## Notification
 
 ## Toast
 
@@ -870,9 +926,9 @@ function Example() {
 
 ### Demo
 
-[Toast](https://storybook.letea.me/?path=/story/components-notification-1--toast){:target="\_blank" rel="noopener"}
+[Toast](https://storybook.letea.me/?path=/story/components-notification-1--toast)
 
-# Text
+## Text
 
 ## Clipboard
 
@@ -903,7 +959,7 @@ function Example() {
 
 ### Demo
 
-[Clipboard](https://storybook.letea.me/?path=/story/components-text-4--clipboard){:target="\_blank" rel="noopener"}
+[Clipboard](https://storybook.letea.me/?path=/story/components-text-4--clipboard)
 
 ### references
 
@@ -935,7 +991,7 @@ function Example() {
 
 ### Demo
 
-[Code](https://storybook.letea.me/?path=/story/components-text-4--code){:target="\_blank" rel="noopener"}
+[Code](https://storybook.letea.me/?path=/story/components-text-4--code)
 
 ### notes
 
@@ -963,7 +1019,7 @@ function Example() {
 
 ### Demo
 
-[EmbedRunKit](https://storybook.letea.me/?path=/story/components-text-4--embedrunkit){:target="\_blank" rel="noopener"}
+[EmbedRunKit](https://storybook.letea.me/?path=/story/components-text-4--embedrunkit)
 
 ## QRCode
 
@@ -993,13 +1049,13 @@ function Example() {
 
 ### Demo
 
-[QRCode](https://storybook.letea.me/?path=/story/components-text-4--qrcode){:target="\_blank" rel="noopener"}
+[QRCode](https://storybook.letea.me/?path=/story/components-text-4--qrcode)
 
 ### references
 
 * [QR Code Generator](http://goQR.me)
 
-# Tool
+## Tool
 
 ## FPS
 
@@ -1028,7 +1084,7 @@ function Example() {
 
 ### Demo
 
-[FPS](https://storybook.letea.me/?path=/story/components-tool-4--fps){:target="\_blank" rel="noopener"}
+[FPS](https://storybook.letea.me/?path=/story/components-tool-4--fps)
 
 ## Frame
 
@@ -1057,7 +1113,7 @@ function Example() {
 
 ### Demo
 
-[Frame](https://storybook.letea.me/?path=/story/components-tool-4--frame){:target="\_blank" rel="noopener"}
+[Frame](https://storybook.letea.me/?path=/story/components-tool-4--frame)
 
 ### references
 
@@ -1084,7 +1140,7 @@ function Example() {
 
 ### Demo
 
-[RenderCounter](https://storybook.letea.me/?path=/story/components-tool-4--rendercounter){:target="\_blank" rel="noopener"}
+[RenderCounter](https://storybook.letea.me/?path=/story/components-tool-4--rendercounter)
 
 ## WindowSize
 
@@ -1115,4 +1171,649 @@ function Example() {
 
 ### Demo
 
-[WindowSize](https://storybook.letea.me/?path=/story/components-tool-4--windowsize){:target="\_blank" rel="noopener"}
+[WindowSize](https://storybook.letea.me/?path=/story/components-tool-4--windowsize)
+
+# Hooks
+
+## Document
+
+## useDocumentTitle
+
+Allow you to get or update the title of the document.
+
+### usage
+
+```js
+import useDocumentTitle from "@letea/react/hooks/useDocumentTitle";
+
+const [title, setTitle] = useDocumentTitle();
+
+```
+
+### Demo
+
+[useDocumentTitle](https://storybook.letea.me/?path=/story/hooks-document-1--usedocumenttitle)
+
+### notes
+
+* The preview mode is not available(because it's an iframe). Please open a new tab.
+
+## Element
+
+## useElementInView
+
+To detect if the element is in the view of the browser.
+
+### usage
+
+```js
+import useElementInView from "@letea/react/hooks/useElementInView";
+
+// Basic
+const element = useElementInView({
+  target: targetRef,
+});
+// element => {
+//   isInView // check is element in view.
+// }
+
+// Basic with Position
+const element = useElementInView({
+  target: targetRef,
+  hasPosition: true,
+});
+// element => {
+//   isInView,
+//   xAxis, => the xAxis of element.
+//   yAxis  => the yAxis of element.
+// }
+
+// Debug
+const element = useElementInView({
+  target: targetRef,
+  isDebug: true,
+});
+// element => {
+//   isInView,
+//   xAxis,
+//   yAxis,
+//   windowWidth, => the width of window.
+//   windowHeight, => the height of window.
+//   top, => the top of element.
+//   right, => the right of element.
+//   bottom, => the bottom of element.
+//   left, => the left of element.
+//   width, => the width of element.
+//   height => the height of element.
+// }
+
+```
+
+### Demo
+
+[useElementInView](https://storybook.letea.me/?path=/story/playground-hooks-element--useelementinview)
+
+## Event
+
+## useEvent
+
+Add an event to an element. You don't need to remove it manually.
+
+### usage
+
+```js
+import useEvent from "@letea/react/hooks/useEvent";
+
+useEvent({
+  eventName: "click",
+  target: targetRef,
+  callback: () => {
+    // Do something...
+  },
+});
+
+```
+
+### Demo
+
+[useEvent](https://storybook.letea.me/?path=/story/hooks-event-2--useevent)
+
+### notes
+
+* Here is a sample of the click event.
+
+## useEvents
+
+Add multiple events to elements. You don't need to remove it manually. The best part is you can let events share a/an method/element or use each of the methods/elements.
+
+### usage
+
+```js
+import useEvents from "@letea/react/hooks/useEvents";
+
+useEvents({
+  eventNames: ["mousedown", "mouseup"],
+  targets: [aRef],
+  callbacks: [
+    () => {
+      // Do something for mousedown & mouseup
+    },
+  ],
+});
+// Trigger when mousedown or mouseup, share with a function and an element.
+
+useEvents({
+  eventNames: ["mousedown", "mouseup"],
+  targets: [aRef],
+  callbacks: [
+    () => {
+      // Do something for mousedown event.
+    },
+    () => {
+      // Do something for mouseup event.
+    },
+  ],
+});
+// Trigger when mousedown or mouseup, use each of functions, share with an element.
+
+```
+
+### Demo
+
+[useEvents](https://storybook.letea.me/?path=/story/hooks-event-2--useevents)
+
+### notes
+
+* The length of eventNames should be equal to or greater than targets and callbacks.
+
+## Form
+
+## useInputCheckbox
+
+Allow you to get or update the value of the checkbox.
+
+### usage
+
+```js
+import useInputCheckbox from "@letea/react/hooks/useInputCheckbox";
+
+function Example() {
+  const [value, setValue] = useInputCheckbox(false);
+
+  return <input type="checkbox" defaultValue={value} onChange={setValue} />;
+}
+
+```
+
+### Demo
+
+[useInputCheckbox](https://storybook.letea.me/?path=/story/hooks-form-5--useinputcheckbox)
+
+## useInputNumber
+
+Allow you to get or update the value of the input.
+
+### usage
+
+```js
+import useInputNumber from "@letea/react/hooks/useInputNumber";
+
+function Example() {
+  const [value, setValue] = useInputNumber(0);
+
+  return <input type="number" defaultValue={value} onChange={setValue} />;
+}
+
+```
+
+### Demo
+
+[useInputNumber](https://storybook.letea.me/?path=/story/hooks-form-5--useinputnumber)
+
+## useInputText
+
+Allow you to get or update the value of the input.
+
+### usage
+
+```js
+import useInputText from "@letea/react/hooks/useInputText";
+
+function BasicExample() {
+  const [value, setValue] = useInputText("Message");
+
+  return <input type="text" defaultValue={value} onChange={setValue} />;
+}
+
+function AdvanceExample() {
+  const [value, setValue] = useInputText({
+    defaultValue: Message,
+    hasDebounce: true,
+    debounceTime: 600,
+  });
+
+  return <input type="text" defaultValue={value} onChange={setValue} />;
+}
+
+```
+
+### Demo
+
+[useInputText](https://storybook.letea.me/?path=/story/hooks-form-5--useinputtext)
+
+### notes
+
+* If you want to use a checkbox, check out the useInputCheckbox.
+
+## useKnobs
+
+Allow you to create a value control easily. The idea is base on Storybook addon-knobs.
+
+### usage
+
+```js
+import useKnobs from "@letea/react/hooks/useKnobs";
+
+function Example() {
+  const textValue = text({ defaultValue: "Message", label: "Text" });
+  const numberValue = number({ defaultValue: 0, label: "Number" });
+  const booleanValue = boolean({ defaultValue: false, label: "Boolean" });
+  const { value: selectValue, index: selectIndex } = select({
+    options: ["Apple", "Banana", "Piapple"],
+    label: "Select",
+  });
+
+  button({
+    label: "Button",
+    handler: () => {
+      // Do something...
+    },
+  });
+
+  return (
+    <div>
+      {`Text: ${textValue}`}
+      <br />
+      {`Number: ${numberValue}`}
+      <br />
+      {`Boolean: ${booleanValue}`}
+      <br />
+      {`Select Value: ${selectValue}`}
+      <br />
+      {`Select Index: ${selectIndex}`}
+      <hr />
+      <KnobsContainer />
+    </div>
+  );
+}
+
+```
+
+### Demo
+
+[useKnobs](https://storybook.letea.me/?path=/story/hooks-form-5--useknobs)
+
+### references
+
+* [Storybook Addon Knobs](https://github.com/storybookjs/storybook/tree/master/addons/knobs)
+
+## useSelect
+
+Allow you to get or update the index of the select.
+
+### usage
+
+```js
+import useSelect from "@letea/react/hooks/useSelect";
+
+function Example() {
+  const [index, setIndex] = useSelect(0);
+
+  return (
+    <select onChange={setIndex}>
+      <option>a</option>
+      <option>b</option>
+      <option>c</option>
+    </select>
+  );
+}
+
+```
+
+### Demo
+
+[useSelect](https://storybook.letea.me/?path=/story/hooks-form-5--useselect)
+
+## Image
+
+## useImage
+
+Get an image with status.
+
+### usage
+
+```js
+import useImage from "@letea/react/hooks/useImage";
+
+const [image, status] = useImage({
+  url: "https://www.example.com/sample.jpg",
+});
+// image => "https://www.example.com/sample.jpg"
+// status => "loading", "loaded", "failed"
+
+```
+
+### Demo
+
+[useImage](https://storybook.letea.me/?path=/story/hooks-image-1--useimage)
+
+## Script
+
+## useScript
+
+Allow you to load script with URL.
+
+### usage
+
+```js
+import useScript from "@letea/react/hooks/useScript";
+
+const isScriptLoaded = useScript("https://cdn.jsdelivr.net/npm/sweetalert2@10");
+
+```
+
+### Demo
+
+[useScript](https://storybook.letea.me/?path=/story/hooks-script-1--usescript)
+
+### notes
+
+* Base on useScript from useHooks.
+
+### references
+
+* [useScript React Hook - useHooks](https://usehooks.com/useScript/)
+
+## State
+
+## useDebounceState
+
+useState with debounce!
+
+### usage
+
+```js
+import useDebounceState from "@letea/react/hooks/useDebounceState";
+
+const [value, setValue] = useDebounceState({
+  defaultValue: "Apple",
+});
+
+setValue("Banana");
+
+```
+
+### Demo
+
+[useDebounceState](https://storybook.letea.me/?path=/story/hooks-state-2--usedebouncestate)
+
+## useThrottleState
+
+useState with throttle!
+
+### usage
+
+```js
+import useThrottleState from "@letea/react/hooks/useThrottleState";
+
+const [value, setValue] = useThrottleState({
+  defaultValue: "Apple",
+});
+
+setValue("Banana");
+
+```
+
+### Demo
+
+[useThrottleState](https://storybook.letea.me/?path=/story/hooks-state-2--usethrottlestate)
+
+## Time
+
+## useCountdown
+
+Create a countdown.
+
+### usage
+
+```js
+import useCountdown from "@letea/react/hooks/useCountdown";
+
+const [counts, isFinish] = useCountdown({
+  defaultCounts: 999,
+  speed: 1000,
+  formatToHHMMSS: false,
+});
+// counts => 999
+// isFinish => false, true
+
+```
+
+### Demo
+
+[useCountdown](https://storybook.letea.me/?path=/story/hooks-time-3--usecountdown)
+
+## useInterval
+
+Allow you to use setInterval without handle clearInterval.
+
+### usage
+
+```js
+import useInterval from "@letea/react/hooks/useInterval";
+
+useInterval({
+  callback: () => {
+    // Do something...
+  },
+  duration: 1000,
+  startInterval: true,
+});
+
+```
+
+### Demo
+
+[useInterval](https://storybook.letea.me/?path=/story/hooks-time-3--useinterval)
+
+## useTimeout
+
+Allow you to use setTimeout without handle clearTimeout.
+
+### usage
+
+```js
+import useTimeout from "@letea/react/hooks/useTimeout";
+
+useTimeout({
+  callback: () => {
+    // Do something...
+  },
+  duration: 1000,
+  startTimeout: true,
+});
+
+```
+
+### Demo
+
+[useTimeout](https://storybook.letea.me/?path=/story/hooks-time-3--usetimeout)
+
+## Window
+
+## useIsWindowEventTriggering
+
+Get a value to check if the event of the window is triggering or not.
+
+### usage
+
+```js
+import useIsWindowEventTriggering from "@letea/react/hooks/useIsWindowEventTriggering";
+
+const isResizing = useIsWindowEventTriggering({
+  eventName: "resize",
+  duration: 1500,
+});
+// isResizing => true, false
+
+```
+
+### Demo
+
+[useIsWindowEventTriggering](https://storybook.letea.me/?path=/story/hooks-window-7--useiswindoweventtriggering)
+
+### notes
+
+* Here is a sample of the resize event.
+
+## useWindowBlur
+
+Get a value to check if the window is blurred or not.
+
+### usage
+
+```js
+import useWindowBlur from "@letea/react/hooks/useWindowBlur";
+
+const isWindowBlurred = useWindowBlur();
+// isWindowLoaded => true, false
+
+```
+
+### Demo
+
+[useWindowBlur](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowblur)
+
+## useWindowEvent
+
+Add an event of window, you don't need to remove it manually.
+
+### usage
+
+```js
+import useWindowEvent from "@letea/react/hooks/useWindowEvent";
+
+useWindowEvent({
+  eventName: "click",
+  callback: () => {
+    // Do something...
+  },
+});
+
+```
+
+### Demo
+
+[useWindowEvent](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowevent)
+
+### notes
+
+* Here is a sample of the click event.
+
+## useWindowEvents
+
+Add multiple events to the window. You don't need to remove it manually. The best part is you can let events share a method or use each of the methods.
+
+### usage
+
+```js
+import useWindowEvents from "@letea/react/hooks/useWindowEvents";
+
+useWindowEvents({
+  eventNames: ["mousedown", "mouseup"],
+  callbacks: [
+    () => {
+      // Do something...
+    },
+  ],
+});
+// Trigger when mousedown or mouseup, share with a method.
+
+useWindowEvents({
+  eventNames: ["mousedown", "mouseup"],
+  callbacks: [
+    () => {
+      // Do something for mousedown event.
+    },
+    () => {
+      // Do something for mouseup event.
+    },
+  ],
+});
+// Trigger when mousedown or mouseup, use each of methods.
+
+```
+
+### Demo
+
+[useWindowEvents](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowevents)
+
+### notes
+
+* Here is a sample of the mouse down and the mouse up events.
+
+## useWindowLoad
+
+Get a value to check if the window is loaded or not.
+
+### usage
+
+```js
+import useWindowLoad from "@letea/react/hooks/useWindowLoad";
+
+const isWindowLoaded = useWindowLoad();
+// isWindowLoaded => true, false
+
+```
+
+### Demo
+
+[useWindowLoad](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowload)
+
+## useWindowOrientation
+
+Get the orientation of the window, including the resized window.
+
+### usage
+
+```js
+import useWindowOrientation from "@letea/react/hooks/useWindowOrientation";
+
+const { isLandscape, isPortrait } = useWindowOrientation();
+// isLandscape => true
+// isPortrait => false
+
+```
+
+### Demo
+
+[useWindowOrientation](https://storybook.letea.me/?path=/story/hooks-window-7--usewindoworientation)
+
+## useWindowSize
+
+Get the size of the window, including the resized window.
+
+### usage
+
+```js
+import useWindowSize from "@letea/react/hooks/useWindowSize";
+
+const { windowWidth, windowHeight } = useWindowSize();
+// windowWidth => 1920
+// windowHeight => 1080
+
+```
+
+### Demo
+
+[useWindowSize](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowsize)
