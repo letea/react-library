@@ -6,7 +6,7 @@ module.exports = {
     message = "" // required
 
     // Advance
-    {
+    arguments = {
       message: "", // required
       duration: 3000, // optional
       hasClose: false // optional
