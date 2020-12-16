@@ -6,7 +6,8 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "readme": "node .readme"
   },
   "dependencies": {
     "@letea/functions": "^2.0.3",
