@@ -20,7 +20,6 @@ module.exports = {
     url:
       "https://storybook.letea.me/?path=/story/hooks-window-7--useiswindoweventtriggering"
   },
-  notes: ["Here is a sample of the resize event."],
   kind: "Window",
   type: "Hooks"
 };

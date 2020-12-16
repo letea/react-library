@@ -33,12 +33,6 @@ module.exports = {
       );
     }
   `,
-  references: [
-    {
-      title: "Public Test Videos",
-      url: "https://gist.github.com/jsturgis/3b19447b304616f18657"
-    }
-  ],
   demo: {
     title: "VideoPlayer",
     url:

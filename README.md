@@ -890,10 +890,6 @@ function Example() {
 
 [VideoPlayer](https://storybook.letea.me/?path=/story/components-media-1--videoplayer)
 
-### references
-
-* [Public Test Videos](https://gist.github.com/jsturgis/3b19447b304616f18657)
-
 ## Notification
 
 ## Toast
@@ -1194,10 +1190,6 @@ const [title, setTitle] = useDocumentTitle();
 
 [useDocumentTitle](https://storybook.letea.me/?path=/story/hooks-document-1--usedocumenttitle)
 
-### notes
-
-* The preview mode is not available(because it's an iframe). Please open a new tab.
-
 ## Element
 
 ## useElementInView
@@ -1277,10 +1269,6 @@ useEvent({
 ### Demo
 
 [useEvent](https://storybook.letea.me/?path=/story/hooks-event-2--useevent)
-
-### notes
-
-* Here is a sample of the click event.
 
 ## useEvents
 
@@ -1672,10 +1660,6 @@ const isResizing = useIsWindowEventTriggering({
 
 [useIsWindowEventTriggering](https://storybook.letea.me/?path=/story/hooks-window-7--useiswindoweventtriggering)
 
-### notes
-
-* Here is a sample of the resize event.
-
 ## useWindowBlur
 
 Get a value to check if the window is blurred or not.
@@ -1716,10 +1700,6 @@ useWindowEvent({
 
 [useWindowEvent](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowevent)
 
-### notes
-
-* Here is a sample of the click event.
-
 ## useWindowEvents
 
 Add multiple events to the window. You don't need to remove it manually. The best part is you can let events share a method or use each of the methods.
@@ -1757,10 +1737,6 @@ useWindowEvents({
 ### Demo
 
 [useWindowEvents](https://storybook.letea.me/?path=/story/hooks-window-7--usewindowevents)
-
-### notes
-
-* Here is a sample of the mouse down and the mouse up events.
 
 ## useWindowLoad
 

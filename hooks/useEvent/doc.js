@@ -22,7 +22,6 @@ module.exports = {
     title: "useEvent",
     url: "https://storybook.letea.me/?path=/story/hooks-event-2--useevent"
   },
-  notes: ["Here is a sample of the click event."],
   kind: "Event",
   type: "Hooks"
 };

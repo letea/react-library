@@ -32,7 +32,6 @@ module.exports = {
     url:
       "https://storybook.letea.me/?path=/story/hooks-window-7--usewindowevents"
   },
-  notes: ["Here is a sample of the mouse down and the mouse up events."],
   kind: "Window",
   type: "Hooks"
 };
