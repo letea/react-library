@@ -12,12 +12,13 @@
     "@letea/functions": "^2.0.3",
     "clipboard": "^2.0.6",
     "highlight.js": "^10.1.2",
-    "prettier": "^2.1.1",
+    "prettier": "^2.2.1",
     "screenfull": "^5.0.2",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@quilicicf/markdown-formatter": "^3.0.2",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
@@ -26,6 +27,7 @@
     "babel-loader": "^8.1.0",
     "eslint": "^7.9.0",
     "eslint-plugin-react": "^7.20.6",
+    "glob": "^7.1.6",
     "nodemon": "2.0.4"
   },
   "prettier": {
