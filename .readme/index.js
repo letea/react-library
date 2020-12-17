@@ -46,11 +46,18 @@ const main = async () => {
     "[![npm version](https://badge.fury.io/js/%40letea%2Freact.svg)](https://badge.fury.io/js/%40letea%2Freact)\n\n";
 
   // Library Description
-  readMe += "A react library.\n";
+  readMe += "A react library for component & hooks.\n\n";
+  readMe +=
+    "[Live Demo](https://codesandbox.io/s/react-with-letea-library-w2p64)\n";
 
   // Install
   readMe += "## Install\n";
   readMe += `\`\`\`bash\nnpm install @letea/react\n\`\`\`\n`;
+
+  // Important
+  readMe += "## Important!!!\n";
+  readMe +=
+    "If you want to use components, please make sure your bundler includes the path of the library `node_modules/@letea/react` to handle jsx compiling.\n";
 
   // Content
   readMe += "## Contents\n";

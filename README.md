@@ -2,13 +2,19 @@
 
 [![npm version](https://badge.fury.io/js/%40letea%2Freact.svg)](https://badge.fury.io/js/%40letea%2Freact)
 
-A react library.
+A react library for component & hooks.
+
+[Live Demo](https://codesandbox.io/s/react-with-letea-library-w2p64)
 
 ## Install
 
 ```bash
 npm install @letea/react
 ```
+
+## Important!!!
+
+If you want to use components, please make sure your bundler includes the path of the library `node_modules/@letea/react` to handle jsx compiling.
 
 ## Contents
 
