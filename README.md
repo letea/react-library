@@ -344,6 +344,7 @@ Allow you to write p5.js in React.
 defaultProps = {
   sketch: null, // (p5) => { /* your code */ }
   hasSoundLibrary: false, // Using p5.sound library or not
+  isIgnoreLoadingMessage: false, // Ignore Loading Message or not
   isPositionFixed: false, // CSS default is absolute position
   zIndex: null, // CSS default is 0
 };
