@@ -1,4 +1,10 @@
-import styled, { css } from "styled-components";
+import styled, { css, createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  #p5_loading {
+    display: none;
+  }
+`;
 
 const Wrapper = styled.div`
   position: absolute;
@@ -20,4 +26,4 @@ const Wrapper = styled.div`
     `}
 `;
 
-export { Wrapper };
+export { GlobalStyle, Wrapper };

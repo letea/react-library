@@ -11,10 +11,11 @@ import PropTypes from "prop-types";
 import useScript from "../../hooks/useScript";
 
 // local file
-import { Wrapper } from "./style";
+import { GlobalStyle, Wrapper } from "./style";
 
 const Processing = ({
   hasSoundLibrary = false,
+  isIgnoreLoadingMessage = false,
   isPositionFixed = false,
   sketch = null,
   zIndex = null
@@ -44,12 +45,16 @@ const Processing = ({
   }, [isLibraryLoaded]);
 
   return (
-    <Wrapper ref={ref} isPositionFixed={isPositionFixed} zIndex={zIndex} />
+    <>
+      {isIgnoreLoadingMessage && <GlobalStyle />}
+      <Wrapper ref={ref} isPositionFixed={isPositionFixed} zIndex={zIndex} />
+    </>
   );
 };
 
 Processing.propTypes = {
   hasSoundLibrary: PropTypes.bool,
+  isIgnoreLoadingMessage: PropTypes.bool,
   isPositionFixed: PropTypes.bool,
   sketch: PropTypes.func,
   zIndex: PropTypes.number
