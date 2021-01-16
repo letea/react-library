@@ -1,7 +1,7 @@
 {
   "name": "@letea/react",
-  "version": "0.7.0",
-  "description": "",
+  "version": "0.7.1",
+  "description": "A react library for component & hooks.",
   "main": "src/index.js",
   "scripts": {
     "start": "start-storybook -p 6006",
@@ -9,6 +9,7 @@
     "build-storybook": "build-storybook",
     "readme": "node .readme"
   },
+  "author": "letea",
   "dependencies": {
     "@letea/functions": "^2.0.3",
     "clipboard": "^2.0.6",
@@ -38,5 +39,10 @@
     "tabWidth": 2,
     "trailingComma": "none"
   },
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IamLeTea/react-library.git"
+  },
+  "homepage": "https://github.com/IamLeTea/react-library"
 }
