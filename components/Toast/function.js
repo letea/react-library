@@ -20,7 +20,7 @@ const defaultProps = {
 
 const elementId = `${DEFAULT_ID}-${getRandomString(5)}`;
 
-const toast = props => {
+const toast = (props) => {
   const { message, url, duration, hasClose } = { ...defaultProps, ...props };
 
   // Remove Exist Component

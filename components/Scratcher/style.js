@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   transition: opacity 600ms;
   user-select: none;
 
-  ${props =>
+  ${(props) =>
     props.isFinish &&
     css`
       opacity: 0;

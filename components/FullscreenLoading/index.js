@@ -54,7 +54,7 @@ const openFullscreenLoading = ({
   backgroundColor = "rgba(0, 0, 0, 0.75)",
   onClick = () => {}
 } = {}) => {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     createReactDOMEElement({
       Component: (
         <Loading
@@ -73,7 +73,7 @@ const openFullscreenLoading = ({
 };
 
 const closeFullscreenLoading = () => {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     removeReactDOMElement(elementId);
     resolve();
   });

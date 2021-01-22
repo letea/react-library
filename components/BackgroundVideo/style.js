@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 100vh;
   z-index: -1;
 
-  ${props =>
+  ${(props) =>
     props.isFixed &&
     css`
       position: fixed;
@@ -25,7 +25,7 @@ const VideoContainer = styled.div`
   width: 100%;
   z-index: 0;
 
-  ${props =>
+  ${(props) =>
     props.isPlaying &&
     css`
       opacity: 1;

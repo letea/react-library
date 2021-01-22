@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   width: 100%;
   z-index: -1;
 
-  ${props =>
+  ${(props) =>
     props.image &&
     css`
       background-image: url(${props.image});

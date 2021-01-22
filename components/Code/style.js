@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     font-size: 1rem;
   }
 
-  ${props =>
+  ${(props) =>
     props.isInit &&
     css`
       display: block;

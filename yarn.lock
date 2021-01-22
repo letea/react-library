@@ -1241,6 +1241,11 @@
   dependencies:
     clipboard "^2.0.6"
 
+"@letea/prettier-config@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@letea/prettier-config/-/prettier-config-0.0.6.tgz#ece2a6eba83bb01f275cd4316206bb6c67e81020"
+  integrity sha512-4jEOJcJIn+VMyX2z//xVHegnyvSOM9Ok1P9tA1KGMQRIIzaXh8c/tV3GTUxBOwzjbVI6Tx70Y0FpgO1Mdh1K6Q==
+
 "@mdx-js/loader@^1.5.1":
   version "1.6.21"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-1.6.21.tgz#e5b2b5c48d182e495d36104b0c7a5da96964a2dd"

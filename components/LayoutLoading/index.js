@@ -27,7 +27,7 @@ const LayoutLoading = ({
   const [progress, setProgress] = useState(0);
   const isShowClickTip = progress === 100 && getUserPermission;
   const videoRef = useRef();
-  const onEachLoad = useCallback(loadedImages => {
+  const onEachLoad = useCallback((loadedImages) => {
     const currentProgress = (loadedImages.length / images.length) * 100;
     setProgress(Math.floor(currentProgress));
     currentProgress === 100 && !getUserPermission && setIsLoaded(true);

@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
 
-  ${props =>
+  ${(props) =>
     props.height &&
     css`
       height: ${props.height}px;
@@ -29,13 +29,13 @@ const Content = styled.div`
   left: 0;
   animation: ${marqueeEffect} 0ms infinite linear;
 
-  ${props =>
+  ${(props) =>
     props.isPaused &&
     css`
       animation-play-state: paused;
     `}
 
-  ${props =>
+  ${(props) =>
     props.isPausedOnHover &&
     css`
       &:hover {
@@ -43,7 +43,7 @@ const Content = styled.div`
       }
     `}
 
-  ${props =>
+  ${(props) =>
     props.animationDuration &&
     css`
       animation-duration: ${props.animationDuration}ms;

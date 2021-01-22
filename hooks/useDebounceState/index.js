@@ -7,12 +7,12 @@ const defaultProps = {
   debounceTime: DEFAULT_DEBOUNCE_TIME
 };
 
-const useDebounceState = props => {
+const useDebounceState = (props) => {
   const { defaultValue, debounceTime } = { ...defaultProps, ...props };
   const [value, setValue] = useState(defaultValue);
   const debounce = useRef();
   const setDebounceValue = useCallback(
-    newValue => {
+    (newValue) => {
       if (typeof newValue !== "undefined") {
         clearTimeout(debounce.current);
         debounce.current = setTimeout(() => {

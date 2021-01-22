@@ -1,7 +1,7 @@
 // node modules
 import { useState, useEffect } from "react";
 
-const useDocumentTitle = initialValue => {
+const useDocumentTitle = (initialValue) => {
   const [value, setValue] = useState(initialValue || document.title);
 
   useEffect(() => {

@@ -117,7 +117,7 @@ class Scratcher extends React.Component {
     const total = pixelData.length;
     let finish = 0;
 
-    pixelData.forEach(item => {
+    pixelData.forEach((item) => {
       if (item === 0) {
         finish += 1;
       }

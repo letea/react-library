@@ -7,14 +7,14 @@ const defaultProps = {
   throttleTime: DEFAULT_THROTTLE_TIME
 };
 
-const useThrottleState = props => {
+const useThrottleState = (props) => {
   const { defaultValue, throttleTime } = { ...defaultProps, ...props };
   const [value, setValue] = useState(defaultValue);
   const timer = useRef();
   const lastTime = useRef();
   const currentTime = useRef();
   const setThrottleValue = useCallback(
-    newValue => {
+    (newValue) => {
       if (typeof newValue !== "undefined") {
         currentTime.current = Date.now();
         if (

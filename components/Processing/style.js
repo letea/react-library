@@ -13,13 +13,13 @@ const Wrapper = styled.div`
   transform: translate3d(0, 0, 0);
   z-index: 0;
 
-  ${props =>
+  ${(props) =>
     props.isPositionFixed &&
     css`
       position: fixed;
     `}
 
-  ${props =>
+  ${(props) =>
     props.zIndex &&
     css`
       z-index: props.zIndex;

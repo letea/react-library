@@ -12,7 +12,7 @@ storiesOf("Hooks", module).add("useThrottleState", () => {
     defaultValue: "Hello World",
     throttleTime: numberValue
   });
-  const onChange = e => {
+  const onChange = (e) => {
     setValue(e.target.value);
   };
 

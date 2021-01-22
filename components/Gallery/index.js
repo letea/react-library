@@ -69,7 +69,7 @@ const Gallery = ({ images = [], duration = 3000, transition = 1000 }) => {
       {!isImagesLoaded && (
         <ImageLoader
           images={images}
-          onEachLoad={loadImages => {
+          onEachLoad={(loadImages) => {
             if (!isStart && loadImages.length >= 2) {
               setIsStart(true);
             }

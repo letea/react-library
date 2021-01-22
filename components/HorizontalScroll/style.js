@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   overflow-y: hidden;
   white-space: nowrap;
 
-  ${props =>
+  ${(props) =>
     props.hideScrollbar &&
     css`
       &::-webkit-scrollbar {

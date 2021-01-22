@@ -12,20 +12,20 @@ const Wrapper = styled.div`
   right: 0;
   user-select: none;
 
-  ${props =>
+  ${(props) =>
     props.isFixed &&
     css`
       position: fixed;
       transform: translate3d(0, 0, 0);
     `}
 
-  ${props =>
+  ${(props) =>
     props.zIndex &&
     css`
       z-index: ${props.zIndex};
     `}
 
-  ${props =>
+  ${(props) =>
     props.hide &&
     css`
       opacity: 0;

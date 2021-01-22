@@ -17,7 +17,7 @@ const Toggle = ({
     <Wrapper
       isActive={isActive}
       onClick={() => {
-        setIsActive(prevValue => !prevValue);
+        setIsActive((prevValue) => !prevValue);
         onChange && onChange(!isActive);
       }}
       style={{

@@ -15,13 +15,13 @@ const Wrapper = styled.div`
   width: 100%;
   z-index: 99990;
 
-  ${props =>
+  ${(props) =>
     props.zIndex &&
     css`
       z-index: ${props.zIndex};
     `}
 
-  ${props =>
+  ${(props) =>
     props.backgroundColor &&
     css`
       background-color: ${props.backgroundColor};

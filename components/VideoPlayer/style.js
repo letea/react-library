@@ -12,19 +12,19 @@ const Video = styled.video`
   width: 100%;
   z-index: 2;
 
-  ${props =>
+  ${(props) =>
     props.posterSrc &&
     css`
       background-image: url(${props.posterSrc});
     `}
 
-  ${props =>
+  ${(props) =>
     props.isCoverSize &&
     css`
       object-fit: cover;
     `}
 
-  ${props =>
+  ${(props) =>
     props.isAbsolute &&
     css`
       position: absolute;

@@ -33,7 +33,7 @@ const getElementId = () => {
   return `${DEFAULT_PREFIX}-${getRandomString(5)}`;
 };
 
-const createRootElement = id => {
+const createRootElement = (id) => {
   let rootElement = document.getElementById(`root-${id}`);
   if (!rootElement) {
     rootElement = document.createElement("div");
@@ -53,7 +53,7 @@ const textDefaultProps = {
   label: ""
 };
 
-const text = props => {
+const text = (props) => {
   const { defaultValue, label } = { ...textDefaultProps, ...props };
   const [value, setValue] = useInputText(defaultValue);
   const id = useMemo(getElementId, []);
@@ -89,7 +89,7 @@ const booleanDefaultProps = {
   label: ""
 };
 
-const boolean = props => {
+const boolean = (props) => {
   const { defaultValue, label } = { ...booleanDefaultProps, ...props };
   const [value, setValue] = useInputCheckbox(defaultValue);
   const id = useMemo(getElementId, []);
@@ -102,7 +102,7 @@ const boolean = props => {
         <Toggle
           id={id}
           defaultValue={defaultValue}
-          onChange={result => setValue(result)}
+          onChange={(result) => setValue(result)}
           width={48}
           height={24}
         />
@@ -125,7 +125,7 @@ const numberDefaultProps = {
   label: ""
 };
 
-const number = props => {
+const number = (props) => {
   const { defaultValue, label } = { ...numberDefaultProps, ...props };
   const [value, setValue] = useInputNumber(defaultValue);
   const id = useMemo(getElementId, []);
@@ -164,7 +164,7 @@ const rangeDefaultProps = {
   label: ""
 };
 
-const range = props => {
+const range = (props) => {
   const { defaultValue, min, max, step, label } = {
     ...rangeDefaultProps,
     ...props
@@ -184,7 +184,7 @@ const range = props => {
           min={min}
           max={max}
           step={step}
-          onChange={result => setValue(result)}
+          onChange={(result) => setValue(result)}
         />
       </Wrapper>,
       rootElement
@@ -205,7 +205,7 @@ const selectDefaultProps = {
   label: ""
 };
 
-const select = props => {
+const select = (props) => {
   const { options, label } = { ...selectDefaultProps, ...props };
   const hasOptions = options && options.length > 0;
   const [index, setIndex] = useSelect(hasOptions ? 0 : null);
@@ -244,7 +244,7 @@ const buttonDefaultProps = {
   label: ""
 };
 
-const button = props => {
+const button = (props) => {
   const { label, handler } = { ...buttonDefaultProps, ...props };
   const id = useMemo(getElementId, []);
 

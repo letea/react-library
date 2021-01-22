@@ -58,7 +58,7 @@ const VideoPlayer = ({
   ) => {
     element && (element.disablePictureInPicture = isNotAllow);
   };
-  const setVideoPlayerNotAllowWithContextMenu = event => {
+  const setVideoPlayerNotAllowWithContextMenu = (event) => {
     event.preventDefault();
     return false;
   };
@@ -78,7 +78,7 @@ const VideoPlayer = ({
     return !isPlay ? poster : "";
   }, [isPlay, poster]);
   const handleOnPlay = useCallback(
-    event => {
+    (event) => {
       setIsPlay(true);
       onPlay && onPlay(event);
     },

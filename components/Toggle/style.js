@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   user-select: none;
   will-change: background;
 
-  ${props =>
+  ${(props) =>
     props.isActive &&
     css`
       background: rgb(29, 138, 113);
@@ -31,7 +31,7 @@ const Button = styled.div`
   width: 50%;
   will-change: transform;
 
-  ${props =>
+  ${(props) =>
     props.isActive &&
     css`
       transform: translate3d(100%, 0, 0);

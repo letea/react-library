@@ -14,7 +14,7 @@ const defaultProps = {
   debounceTime: DEFAULT_DEBOUNCE_TIME
 };
 
-const useInputText = props => {
+const useInputText = (props) => {
   let { defaultValue, hasDebounce, debounceTime } = {
     ...defaultProps,
     ...props
@@ -24,7 +24,7 @@ const useInputText = props => {
     debounceTime: hasDebounce ? debounceTime : 0
   });
   const onChange = useCallback(
-    e => {
+    (e) => {
       setValue(e.target.value);
     },
     [hasDebounce, debounceTime]

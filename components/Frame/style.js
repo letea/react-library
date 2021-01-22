@@ -18,14 +18,14 @@ const Wrapper = styled.div`
   top: 0;
   width: 100%;
 
-  ${props =>
+  ${(props) =>
     props.isFixed &&
     css`
       position: fixed;
       transform: translate3d(0, 0, 0);
     `}
 
-  ${props =>
+  ${(props) =>
     props.zIndex &&
     css`
       z-index: ${props.zIndex};

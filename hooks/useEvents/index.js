@@ -27,11 +27,11 @@ const useEvents = (props = defaultProps) => {
   }
 
   useEffect(() => {
-    const getTarget = index => {
+    const getTarget = (index) => {
       const target = targets.length > 1 ? targets[index] : targets[0];
       return target.current || target;
     };
-    const getCallback = index => {
+    const getCallback = (index) => {
       return callbacks.length > 1 ? callbacks[index] : callbacks[0];
     };
     eventNames.forEach((eventName, index) => {

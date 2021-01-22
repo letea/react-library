@@ -17,7 +17,7 @@ const Container = styled.div`
   transform: translate3d(0, 0, 0);
   width: 80%;
 
-  ${props =>
+  ${(props) =>
     props.isLongText &&
     css`
       width: 95%;
@@ -32,7 +32,7 @@ const Container = styled.div`
     text-align: right;
     width: 25%;
 
-    ${props =>
+    ${(props) =>
       props.isLongText &&
       css`
         width: 40%;
@@ -61,14 +61,14 @@ const Wrapper = styled.div`
     transform: translate3d(0, 1rem, 0);
   }
 
-  ${props =>
+  ${(props) =>
     props.isShow &&
     css`
       opacity: 1;
       transform: translate3d(0, 0, 0) !important;
     `}
 
-  ${props =>
+  ${(props) =>
     props.hasClose &&
     css`
       cursor: default;
@@ -102,7 +102,7 @@ const Message = styled.div`
   width: 100%;
   padding: 0.75rem;
 
-  ${props =>
+  ${(props) =>
     props.hasClose &&
     css`
       border-right: 1px solid #ddd;

@@ -22,14 +22,13 @@ const Wrapper = styled.div`
   pointer-events: none;
   position: absolute;
 
-
-  ${props =>
+  ${(props) =>
     props.zIndex &&
     css`
       z-index: ${props.zIndex};
     `}
 
-  ${props =>
+  ${(props) =>
     props.isFixed &&
     css`
       position: fixed;
@@ -38,45 +37,45 @@ const Wrapper = styled.div`
       height: 100vh;
     `}
 
-  ${props =>
+  ${(props) =>
     props.startAnimation &&
     css`
       display: block;
       animation-name: ${keyframesWave};
     `}
 
-  ${props =>
+  ${(props) =>
     props.duration &&
     css`
       animation-duration: ${props.duration}ms;
     `}
 
-  ${props =>
+  ${(props) =>
     props.frames &&
     css`
       animation-timing-function: steps(${props.frames - 1});
       background-size: 100% ${props.frames * 100}%;
     `}
 
-  ${props =>
+  ${(props) =>
     props.reverse &&
     css`
       animation-direction: reverse;
     `}
 
-  ${props =>
+  ${(props) =>
     props.infinite &&
     css`
       animation-iteration-count: infinite;
     `}
 
-  ${props =>
+  ${(props) =>
     props.forwards &&
     css`
       animation-fill-mode: forwards;
     `}
 
-  ${props =>
+  ${(props) =>
     props.url &&
     css`
       background-image: url(${props.url});

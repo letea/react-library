@@ -23,7 +23,7 @@ const Slider = ({
           max={max}
           step={step}
           defaultValue={defaultValue}
-          onChange={e => {
+          onChange={(e) => {
             setValue(e.target.value);
             onChange && onChange(e.target.value);
           }}

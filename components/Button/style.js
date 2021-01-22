@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }
 
   /* Primary Style */
-  ${props => props.primary && css``}
+  ${(props) => props.primary && css``}
 `;
 
 export { Wrapper };

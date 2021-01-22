@@ -18,20 +18,20 @@ const Image = styled.div`
   transform: translate3d(0, 0, 0);
   transition: none;
 
-  ${props =>
+  ${(props) =>
     props.image &&
     css`
       background-image: url(${props.image});
     `}
 
-  ${props =>
+  ${(props) =>
     props.fade &&
     css`
       opacity: 0;
       transition: opacity 0ms;
     `}
 
-  ${props =>
+  ${(props) =>
     props.transition &&
     css`
       transition-duration: ${props.transition}ms;

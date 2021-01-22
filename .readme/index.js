@@ -7,12 +7,12 @@ const prettier = require("prettier");
 const { formatFromString } = require("@quilicicf/markdown-formatter");
 
 // Documents
-const documents = glob.sync("{,!(node_modules)/**/}doc.js").map(file => {
+const documents = glob.sync("{,!(node_modules)/**/}doc.js").map((file) => {
   return require(path.resolve(file));
 });
 
 const groupedDocuments = {};
-documents.forEach(document => {
+documents.forEach((document) => {
   const { kind, type } = document;
 
   // Add Type
@@ -64,15 +64,15 @@ const main = async () => {
 
   Object.keys(groupedDocuments)
     .sort()
-    .forEach(type => {
+    .forEach((type) => {
       readMe += `### ${type}\n`;
 
       Object.keys(groupedDocuments[type])
         .sort()
-        .forEach(kind => {
+        .forEach((kind) => {
           readMe += `#### ${kind}\n`;
 
-          groupedDocuments[type][kind].forEach(item => {
+          groupedDocuments[type][kind].forEach((item) => {
             readMe += `- [${item.title}](#${item.title.toLowerCase()})\n`;
           });
         });
@@ -81,17 +81,17 @@ const main = async () => {
   // Components & Hooks
   Object.keys(groupedDocuments)
     .sort()
-    .forEach(type => {
+    .forEach((type) => {
       // Type
       readMe += `# ${type}\n`;
 
       Object.keys(groupedDocuments[type])
         .sort()
-        .forEach(kind => {
+        .forEach((kind) => {
           // Kind
           readMe += `## ${kind}\n`;
 
-          groupedDocuments[type][kind].forEach(item => {
+          groupedDocuments[type][kind].forEach((item) => {
             // title
             readMe += `## ${item.title}\n`;
 
@@ -140,7 +140,7 @@ const main = async () => {
             if (item.canIUse) {
               readMe += "### Can I Use\n";
 
-              item.canIUse.forEach(canIUseItem => {
+              item.canIUse.forEach((canIUseItem) => {
                 readMe += `<img src="https://caniuse.bitsofco.de/image/${canIUseItem}.png" alt="" />\n\n`;
               });
             }
@@ -148,7 +148,7 @@ const main = async () => {
             // notes
             if (item.notes) {
               readMe += "### notes\n";
-              item.notes.forEach(note => {
+              item.notes.forEach((note) => {
                 readMe += `- ${note}\n`;
               });
             }
@@ -156,7 +156,7 @@ const main = async () => {
             // references
             if (item.references) {
               readMe += "### references\n";
-              item.references.forEach(reference => {
+              item.references.forEach((reference) => {
                 readMe += `- [${reference.title}](${reference.url})\n`;
               });
             }

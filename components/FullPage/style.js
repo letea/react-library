@@ -5,13 +5,13 @@ const Wrapper = styled.div`
   box-sizing: content-box;
   width: 100%;
 
-  ${props =>
+  ${(props) =>
     props.debug &&
     css`
       background-color: rgba(255, 0, 0, 0.5);
     `}
 
-  ${props =>
+  ${(props) =>
     props.active &&
     css`
       display: flex;
@@ -19,13 +19,13 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  ${props =>
+  ${(props) =>
     props.debug &&
     css`
       background-color: rgba(0, 255, 0, 0.5);
     `}
 
-  ${props =>
+  ${(props) =>
     props.active &&
     css`
       align-self: center;
