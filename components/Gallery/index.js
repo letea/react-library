@@ -15,7 +15,15 @@ import useTimeout from "../../hooks/useTimeout";
 // local files
 import { Wrapper, Image } from "./style";
 
-const Gallery = ({ images = [], duration = 3000, transition = 1000 }) => {
+const Gallery = ({
+  backgroundColor = null,
+  backgroundSize = null,
+  duration = 3000,
+  images = [],
+  position = null,
+  transition = 1000,
+  zIndex = null
+}) => {
   const [isStart, setIsStart] = useState(false);
   const [isChanging, setIsChanging] = useState(false);
   const [isImagesLoaded, setIsImagesLoaded] = useState(false);
@@ -58,24 +66,30 @@ const Gallery = ({ images = [], duration = 3000, transition = 1000 }) => {
   }, [isChanging, transition]);
 
   return (
-    <Wrapper>
-      <Image image={images[nextIndex]} />
+    <Wrapper position={position} zIndex={zIndex}>
       <Image
-        image={images[index]}
+        backgroundColor={backgroundColor}
+        backgroundSize={backgroundSize}
+        image={images[nextIndex]}
+      />
+      <Image
+        backgroundColor={backgroundColor}
+        backgroundSize={backgroundSize}
         fade={isChanging}
-        transition={transition}
+        image={images[index]}
         onTransitionEnd={onTransitionEnd}
+        transition={transition}
       />
       {!isImagesLoaded && (
         <ImageLoader
           images={images}
+          onAllLoad={() => {
+            setIsImagesLoaded(true);
+          }}
           onEachLoad={(loadImages) => {
             if (!isStart && loadImages.length >= 2) {
               setIsStart(true);
             }
-          }}
-          onAllLoad={() => {
-            setIsImagesLoaded(true);
           }}
         />
       )}
@@ -84,9 +98,13 @@ const Gallery = ({ images = [], duration = 3000, transition = 1000 }) => {
 };
 
 Gallery.propTypes = {
-  images: PropTypes.array.isRequired,
+  backgroundColor: PropTypes.string,
+  backgroundSize: PropTypes.string,
   duration: PropTypes.number,
-  transition: PropTypes.number
+  images: PropTypes.array.isRequired,
+  position: PropTypes.string,
+  transition: PropTypes.number,
+  zIndex: PropTypes.number
 };
 
 export default Gallery;

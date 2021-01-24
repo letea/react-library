@@ -3,9 +3,18 @@ module.exports = {
   description: "A simple gallery.",
   defaultProps: `
     defaultProps = {
-      images: [], // required
-      duration: 3000, // optional
-      transition: 1000 // optional
+      // Required
+      images: [],
+
+      // Optional
+      duration: 3000,
+      transition: 1000,
+
+      // CSS
+      backgroundColor: null, // default is #000 in css
+      backgroundSize: null, // default is cover in css
+      position: null, // default is absolute in css
+      zIndex: null, // default is 0 in css
     }
   `,
   usage: `
