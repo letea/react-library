@@ -63,7 +63,7 @@ const Gallery = ({
     if (isChanging && transition === 0) {
       onTransitionEnd();
     }
-  }, [isChanging, transition]);
+  }, [isChanging, transition, onTransitionEnd]);
 
   return (
     <Wrapper position={position} zIndex={zIndex}>
